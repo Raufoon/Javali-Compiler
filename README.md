@@ -1,13 +1,13 @@
 <html>
 <body>
 
-<h3>Javali-Compiler</h3>
+<h3>Project Title: Javali-Compiler</h3>
 
 <h3>Course: Compiler Lab</h3>
 
 <h3>Environment: Flex, Bison (Windows)</h3>
 
-<h3>Description<h3>
+<h3>Description</h3>
 We have made a compiler which can run the <a href='https://www.dropbox.com/s/sxqydxgmvfn6frd/javali.pdf?dl=0'>Javali</a> Language. 
 We have done the following things:
 <ul>
