@@ -1,0 +1,27 @@
+We have added the following rules to detect errors:
+
+Error handling #1:
+	handles missing brackets
+
+	rules added:
+	1. ClassDecl-> CLASS IDENT DeclSeq RCB 
+	2. ClassDecl-> CLASS LCB IDENT DeclSeq 
+	3. ArrayType-> PrimitiveType R3B
+	4. ArrayType-> IDENT R3B
+	5. QualifiedType-> IDENT RB
+	
+Error handling #2:
+	detects method name missing
+
+	rules added:
+	1. MethodHeading-> VOID LB RB
+
+
+Error handling #3:
+	detects missing field
+
+	rules added:
+	1. FieldSelector-> DOT SEMI
+	2. FieldSelector-> DOT DOT
+
+	

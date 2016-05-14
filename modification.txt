@@ -1,0 +1,63 @@
+1. 
+We excluded the rules: 
+	Ident::=Letter {Letter|Digit} 
+	and, Letter::= letters "A" to "Z" | "a" to "z"
+We used IDENT as a terminal.
+
+2.
+We excluded the rules: 
+	Integer::= Digit{Digit}|"0x" HexDigit {HexDigit}
+	and, Digit::= digits "0" to "9"
+	and, HexDigit::= Digit | letters "a" to "f" | letters "A" to "F"
+We combined these rules to create two non terminals- DECIMAL and HEXA.
+We added the rule: Integer::=DECIMAL | HEXA;
+
+3.
+We replaced the rule: StmtBlock::= "{" {Stmt} "}"
+with these rules-
+StmtBlock::= "{" StmtList "}"
+StmtList::= ""| Stmt StmtList
+
+4.
+We added the following tokens in the javali.l file:
+
+"boolean" {return BOOLEAN;}
+"class" {return CLASS;}
+"else" {return ELSE;}
+"extends" {return EXTENDS;}
+"false" {return FALSE;}
+"if" {return IF;}
+"int" {return INT;}
+"new" {return NEW;}
+"null" {return NULL_VAL;}
+"read" {return READ;}
+"true" {return TRUE;}
+"this" {return THIS;}
+"void" {return VOID;}
+"while" {return WHILE;}
+"writeln" {return WRITELN;}
+"write" {return WRITE;}
+"+" {return ADD;}
+"-" {return SUB;}
+"%" {return MOD;}
+"*" { return MUL;}
+"/" { return DIV;}
+"&&" {return AND;}
+"||" {return OR;}
+"==" {return EQUALITY;}
+"!=" {return INEQUALITY;}
+">=" {return GREATEREQUALS;}
+">" {return GREATER;}
+"<=" {return LESSEQUALS;}
+"<" {return LESS;}
+"!" {return FACTORIAL;}
+"." {return DOT;}
+"," {return COMA;}
+"{" {return LCB;}
+"}" {return RCB;}
+"(" {return LB;}
+")" {return RB;}
+"[" {return L3B;}
+"]" {return R3B;}
+"=" {return EQUAL;}
+";" {return SEMI;}

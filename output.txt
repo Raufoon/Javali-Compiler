@@ -1,0 +1,89 @@
+class Record {
+void foo()
+x = (
+}
+
+class Main {
+void swap(Record r1,Record r2)
+temp = r1.a
+r1.a = r2.a
+r2.a = temp
+void sort(int left,int right)
+t1 = a[left].a+a[right].a
+t2 = t1/2
+m = t2
+i = left
+j = right
+label_7:
+t3 = i<=j
+if t3 == false goto label_8
+label_1:
+t4 = a[i].a<m
+if t4 == false goto label_2
+t5 = i+1
+i = t5
+goto label_1
+label_2:
+label_3:
+t6 = a[j].a>m
+if t6 == false goto label_4
+t7 = j-1
+j = t7
+goto label_3
+label_4:
+t8 = i<=j
+if t8 == true goto label_5
+goto label_6
+label_5:
+param a[i]
+param a[j]
+call swap
+t9 = i+1
+i = t9
+t10 = j-1
+j = t10
+label_6:
+goto label_7
+label_8:
+t11 = left<j
+if t11 == true goto label_9
+goto label_10
+label_9:
+param left
+param j
+call sort
+label_10:
+t12 = i<right
+if t12 == true goto label_11
+goto label_12
+label_11:
+param i
+param right
+call sort
+label_12:
+void main()
+SIZE = 5
+a = new Record[SIZE]
+j = 0
+label_13:
+t13 = j<SIZE
+if t13 == false goto label_14
+a[j] = new Record()
+t14 = j+1
+j = t14
+goto label_13
+label_14:
+a[0].a = 5
+a[1].a = 3
+a[2].a = 1
+a[3].a = 4
+a[4].a = 2
+param 0
+param 4
+call sort
+i = a[3].a
+param i
+call write
+call writeln
+}
+
