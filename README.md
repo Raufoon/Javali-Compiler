@@ -8,7 +8,7 @@
 <h3>Environment: Flex, Bison (Windows)</h3>
 
 <h3>Description<h3>
-<p>We have made a compiler which can run the <a href='https://www.dropbox.com/s/sxqydxgmvfn6frd/javali.pdf?dl=0'>Javali</a> Language. 
+We have made a compiler which can run the <a href='https://www.dropbox.com/s/sxqydxgmvfn6frd/javali.pdf?dl=0'>Javali</a> Language. 
 We have done the following things:
 <ul>
 <li>Grammer Modification</li>
@@ -22,7 +22,6 @@ We still have to do:
 <li>Machine Code generation</li>
 <li>Executing the code</li>
 </ul>
-</p>
 
 <h3>How to run</h3>
 <ul>
